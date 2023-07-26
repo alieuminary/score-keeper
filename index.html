@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Score Keeper</title>
+    <link rel="icon" href="favicon.ico">
+    <!-- <link rel="stylesheet" href="css/style.css"> -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bulma@0.9.4/css/bulma.min.css">
+</head>
+
+<body>
+    <section class="section">
+        <div class="container">
+            <div class="columns">
+                <div class="column is-half is-offset-one-quarter">
+                    <div class="card">
+                        <div class="card-image">
+                            <figure class="image is-16by9">
+                                <img src="images/basketball-scoreboard.jpg" alt="Placeholder image">
+                            </figure>
+                        </div>
+                        <header class="card-header">
+                            <h1 class="card-header-title card-header-icon ">Basketball Score Keeper</h1>
+                        </header>
+                        <div class="field">
+                            <form class="px-5 pt-5">
+                                <label for="team1Name" class="label mb-0 has-text-primary">Team 1 Name:</label>
+                                <input id="team1Name" type="text" class="input is-primary is-small is-rounded mb-5"
+                                    placeholder="Enter team 1">
+                                <label for="team2Name" class="label mb-0 has-text-info">Team 2 Name:</label>
+                                <input id="team2Name" type="text" class="input is-info is-small is-rounded"
+                                    placeholder="Enter Team 2">
+                            </form>
+                        </div>
+                        <div class="card-content has-text-centered px-6">
+                            <div class="content">
+                                <h2 class="title is-1"><span id="team1Score">0</span> : <span id="team2Score">0</span>
+                                </h2>
+                                <p>All Games have "win by two" rule</p>
+                                <label for="targetScore" class="label is-medium is-inline">Playing To:</label>
+                                <div class="select is-rounded is-small">
+                                    <select name="targetScore" id="targetScore">
+                                        <option value="7">7</option>
+                                        <option value="11">11</option>
+                                        <option value="16">16</option>
+                                        <option value="21">21</option>>
+                                    </select>
+                                </div>
+                            </div>
+                        </div>
+                        <footer class="card-footer">
+                            <button id="team1Button" class="is-primary button is-medium card-footer-item">&#43;1 Team One</button>
+                            <button id="team2Button" class="is-info button is-medium card-footer-item">&#43;1 Team Two</button>
+                        </footer>
+                        <button id="reset" class="is-danger button is-medium is-fullwidth">Reset</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <script src="js/app.js"></script>
+</body>
+
+</html>

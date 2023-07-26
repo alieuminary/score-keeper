@@ -1,0 +1,31 @@
+#playerOneScore + p {
+    display: inline;
+}
+
+#scoreBoard {
+    font-size: 2em;
+    font-family: sans-serif;
+}
+
+#targetScoreBox {
+    display: flex;
+    flex-direction: row;
+    align-items: baseline;
+}
+
+#targetScore {
+    margin-left: 0.5em
+}
+
+h1 {
+    font-size: 20px;
+    font-family: sans-serif;
+}
+
+.winner-text {
+    color: green;
+}
+
+.loser-text {
+    color: red;
+}
