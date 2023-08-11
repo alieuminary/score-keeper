@@ -20,8 +20,27 @@ const t2 = {
 const targetScoreSelection = document.querySelector('#targetScore');
 const resetButton = document.querySelector('#reset');
 const scoreBoard = document.querySelector('h2');
+const basketballSpinner = document.querySelector('#wait-indicator');
 let targetScore = 7;
 let winByTwoScore;
+
+function loadBasketballSpinner() {
+    basketballSpinner.style.display = 'block';
+    scoreBoard.style.display = 'none';
+    const promise = new Promise((resolve, reject) => {
+        setTimeout(() => resolve('Promise #1'), 3000);
+    });
+
+    promise
+        .then(
+            result => console.log(result),
+        )
+        .finally(() => {
+            console.log('Completed Promise');
+            basketballSpinner.style.display = 'none';
+            scoreBoard.style.display = 'block';
+        })
+}
 
 function updateScore1(player, opponent) {
     scoreBoard.classList.add('has-background-black');
@@ -105,6 +124,7 @@ targetScoreSelection.addEventListener('change', () => {
 resetButton.addEventListener('click', reset);
 
 function reset() {
+    loadBasketballSpinner();
     for (const p of [t1, t2]) {
         p.score = 0;
         p.display.textContent = 0;

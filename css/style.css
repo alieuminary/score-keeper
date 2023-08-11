@@ -29,3 +29,7 @@ h1 {
 .loser-text {
     color: red;
 }
+
+#wait-indicator {
+    display: none;
+}
